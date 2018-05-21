@@ -6,10 +6,6 @@ Bamazon is an Amazon-like storefront. The app takes orders from customers and up
 
 ## App Demo
 
-* Include screenshots (or a video) of typical user flows through your application (for the customer and if relevant the manager/supervisor). This includes views of the prompts and the responses after their selection (for the different selection options).
-
-* Because screenshots (and well-written READMEs) are extremely important in the context of GitHub, this will be part of the grading.
-
 To see how the app works, [click here for a demo](https://guides.github.com/features/mastering-markdown/).
 
 ### Functionality 

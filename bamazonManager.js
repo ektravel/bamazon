@@ -33,6 +33,14 @@ connection.connect(function (err) {
             });
         //if View Low Inventory is selected, list all items with an inventory count lower than 50 
         } else if(answer.options === "View Low Inventory"){
+            connection.query("SELECT * FROM products WHERE stock_quantity < 50", function (err, res){
+                if (err) throw err;
+                for (i=0; i < res.length; i++){
+                    console.log("\n" + "\nLow Inventory: " + "Item ID: " + res[i].item_id + "\nItem: " + res[i].product_name + "\nUnit price: $" + res[i].price + "\nQuantity: " + res[i].stock_quantity)
+                }
+            });
+        //if Add to Inventory is selected, display a prompt to add more of any item currently in store
+        } else if(answer.option === "Add to Inventory"){
 
         }
            
@@ -40,5 +48,5 @@ connection.connect(function (err) {
 });
 
 
-// If a manager selects Add to Inventory, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+
 // If a manager selects Add New Product, it should allow the manager to add a completely new product to the store.
