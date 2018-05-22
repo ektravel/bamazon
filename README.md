@@ -21,3 +21,21 @@ To see how the app works, [click here for a demo](https://drive.google.com/file/
 5. If the quantity on hand is sufficient, the SQL database is updated to reflect the remaining quantity and the user is shown the total cost of their purchase. 
 
 - - -
+
+## Manager View: App Demo
+
+To see how the app works, [click here for a demo](https://drive.google.com/file/d/1ms6WgVpzR5JojSYt-PXKliCLnvmdB30U/view?usp=sharing).
+
+### Functionality 
+
+1. The application starts with a display of menu options.  
+
+2. If 'View Products for Sale' is selected, all available items are displayed.
+
+3. If 'View Low Inventory' is selected, all items with an inventory count lower than 50 are displayed.
+
+4. If 'Add to Inventory' is selected, a prompt is displayed that will let the user increase inventory of any item currently in stock.
+
+5. If 'Add New Product' is selected, the app will prompt the user to add a new product to the store. 
+
+- - -
