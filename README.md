@@ -1,12 +1,12 @@
-# Node.js & MySQL: BAMAZON Customer View
+# Node.js & MySQL: BAMAZON
 
 ## Overview
 
 Bamazon is an Amazon-like storefront. The app takes orders from customers and updates quantity on hand. It uses npm's MySQL and Inquirer packages for data input and storage.  
 
-## App Demo
+## Customer View: App Demo
 
-To see how the app works, [click here for a demo](https://guides.github.com/features/mastering-markdown/).
+To see how the app works, [click here for a demo](https://drive.google.com/file/d/1tGS2W006gRF2T2RZs3t4D8MahJGnXkKz/view?usp=sharing).
 
 ### Functionality 
 

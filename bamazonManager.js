@@ -41,12 +41,57 @@ connection.connect(function (err) {
             });
         //if Add to Inventory is selected, display a prompt to add more of any item currently in store
         } else if(answer.option === "Add to Inventory"){
+            inquirer.prompt
 
-        }
-           
+        // if Add New Product is selected, it should allow the manager to add a completely new product to the store.
+        }else if(answer.options === "Add New Product"){
+            console.log("Add New Product");
+            inquirer.prompt([
+                {
+                    name: "itemName",
+                    type: "input",
+                    message: "Enter product name"
+                },
+                {
+                    name:"itemDepartment",
+                    type:"input",
+                    message: "Enter product department"
+                },
+                {
+                    name: "itemPrice",
+                    type: "input",
+                    message:"Enter unit price"
+                },
+                {
+                    name: "itemStock",
+                    type: "input",
+                    message: "Enter quantity"
+                }
+            ]).then(function(answer){
+                connection.query("INSERT INTO products  SET ?",
+                {
+                    product_name: answer.itemName,
+                    department_name: answer.itemDepartment,
+                    price: answer.itemPrice,
+                    stock_quantity: answer.itemStock
+                },
+                function(err, res){
+                    if(err) throw err;
+                    console.log("New item has been added!")
+                });
+            });
+        }    
     });
 });
 
 
-
-// If a manager selects Add New Product, it should allow the manager to add a completely new product to the store.
+// ]).then(function(choice) {
+//     connection.query("UPDATE products SET ? WHERE ?",
+//     [
+//         {
+//             stock_quantity: choice.newQty
+//         },
+//         {
+//             item_id: choice.itemID
+//         }
+//     ],
